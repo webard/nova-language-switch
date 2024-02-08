@@ -9,19 +9,17 @@
       <span class="ml-1 font-bold hidden md:inline mr-1" v-if="displayLanguageName == true">{{selectedDisplay}}</span>
     </DropdownTrigger>
     <template #menu>
-      <DropdownMenu>
+      <DropdownMenu class=" py-1 px-1">
         <template v-for="(value,key) in langs">
-          <div class="flex flex-col py-1">
-            <DropdownMenuItem
-                              :key="key"
+            <DropdownMenuItem         
                                as="button"
-                               class="flex items-center hover:bg-gray-100"
+                               class="flex items-center gap-2 block w-full text-left px-3 focus:outline-none rounded truncate whitespace-nowrap text-sm py-1.5 hover:bg-gray-50 dark:hover:bg-gray-800 focus:ring cursor-pointer text-gray-500 active:text-gray-600 dark:text-gray-500 dark:hover:text-gray-400 dark:active:text-gray-600 flex items-center gap-2"
                                @click.prevent="changeLang(key)"
             >
               <span  class="ml-2" v-if="selected!==key">{{value}}</span>
               <span class="ml-2 font-bold text-primary-500"  v-else>{{value}}</span>
             </DropdownMenuItem>
-          </div>
+         
         </template>
 
       </DropdownMenu>
