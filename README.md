@@ -1,12 +1,13 @@
 
 ## A Laravel Nova Tool to add language switcher to your application
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/badinansoft/nova-language-switch.svg?style=flat-square)](https://packagist.org/packages/badinansoft/nova-language-switch)
-[![Total Downloads](https://img.shields.io/packagist/dt/badinansoft/nova-language-switch.svg?style=flat-square)](https://packagist.org/packages/badinansoft/nova-language-switch)
+
+Original package: https://github.com/badinansoft/nova-language-switch
 
 This [Nova](https://nova.laravel.com) tool lets you:
   - Add a Language switcher to the header of the nova application.
-  - Handle Switch language and put the current locale to Laravel cache to remember language from multiple browsers.
+  - Handle Switch language and put the current locale to Laravel session to remember language from multiple browsers.
   - Switch the direction of the application based on the RTL-supported application written in config.
+  - Enable or disable showing language name
  
  ## Requirements
   - `php: >=8.0`
@@ -29,7 +30,7 @@ This [Nova](https://nova.laravel.com) tool lets you:
 You can install the nova tool in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
-composer require badinansoft/nova-language-switch
+composer require webard/nova-language-switch
 ```
 
 Next up, you must register the tool with Nova. This is typically done in the `tools` method of the `NovaServiceProvider`.
@@ -69,13 +70,19 @@ return [
 	 'supported-languages' => [  
 		  'en' => 'English',  
 		  'ar' => 'Arabic',  
-		  //here you can add new lanaguage or remove language that you need by 'local'=>'Label'
-	 ],  
+		  //here you can add new language or remove language that you need by 'local'=>'Label'
+	 ],
+
+	/**
+     * Display language name in the language switcher
+     * bool
+    */
+    'display-language-name' => true,
   
 	/**  
 	 * Languages That need RTL support 
 	 *  string 
-	 * */  
+	 */  
 	'rtl-languages' => [  
 		  'ar'  
 		  //here put that language that need support RTL just put local of the language like this example for arabic 

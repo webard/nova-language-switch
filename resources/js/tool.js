@@ -9,18 +9,21 @@ Nova.booting((app, store) => {
         if (appHeader.length > 0) {
            let languages = Nova.config('nova_language_switcher').languages;
            let selected = Nova.config('nova_language_switcher').current_lang;
+           let displayLanguageName = Nova.config('nova_language_switcher').display_language_name;
+
            let switchLang = defineComponent({
                 extends: LanguageSwitcher, data() {
                     return {
                         langs: languages,
-                        selectedDisplay:languages[selected],
-                        selected:selected
+                        displayLanguageName: displayLanguageName,
+                        selectedDisplay: languages[selected],
+                        selected: selected
                     }
                 }
             })
 
            let lang =  document.createElement('div');
-           lang.className = 'mr-3';
+           // lang.className = 'mr-3';
            let newApp = createApp(switchLang);
 
            newApp.component('Dropdown',app._context.components.Dropdown);

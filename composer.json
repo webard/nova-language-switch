@@ -1,5 +1,5 @@
 {
-    "name": "badinansoft/nova-language-switch",
+    "name": "webard/nova-language-switch",
     "description": "A Laravel Nova package to switch language in your application",
     "keywords": [
         "laravel",
@@ -9,12 +9,17 @@
         "translation",
         "i18n"
     ],
-    "homepage": "https://github.com/badinansoft/nova-language-switch",
+    "homepage": "https://github.com/webard/nova-language-switch",
     "authors": [
         {
             "name": "Shahab Zebari",
             "email": "me@shahabzebari.net",
             "homepage": "https://shahabzebari.net",
+            "role": "Developer"
+        },
+        {
+            "name": "Bartlomiej Gajda",
+            "email": "mail@webard.me",
             "role": "Developer"
         }
     ],

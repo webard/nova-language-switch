@@ -2,11 +2,11 @@
   <Dropdown placement="bottom-end">
     <DropdownTrigger
         :show-arrow="false"
-        class="h-10 w-full hover:text-primary-500"
+        class="border text-left appearance-none cursor-pointer rounded text-sm font-bold ring-primary-200 dark:ring-gray-600 relative  inline-flex items-center justify-center bg-transparent border-transparent text-gray-500 dark:text-gray-400 hover:[&:not(:disabled)]:text-primary-500 h-9 min-w-9"
     >
 
-      <Icon type="language"  />
-      <span class="ml-1 font-bold hidden md:inline">{{selectedDisplay}}</span>
+      <Icon type="language" class="inline inline-flex items-center justify-center"  />
+      <span class="ml-1 font-bold hidden md:inline mr-1" v-if="displayLanguageName == true">{{selectedDisplay}}</span>
     </DropdownTrigger>
     <template #menu>
       <DropdownMenu>

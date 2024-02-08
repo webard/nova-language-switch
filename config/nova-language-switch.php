@@ -17,6 +17,11 @@ return [
         'ar' => 'Arabic',
     ],
 
+    /**
+     * Display language name in the language switcher
+     * bool
+    */
+    'display-language-name' => true,
 
     /**
      * Languages That need RTL support
